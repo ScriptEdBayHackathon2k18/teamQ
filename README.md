@@ -1,5 +1,4 @@
-# Welcome to ScriptEd Hackathon 2018!!!
-
+# ScriptEd Hackathon: Dare Exlpore Disrupt!
 
 ## Your Project Members
 
