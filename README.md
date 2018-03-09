@@ -1,4 +1,4 @@
-# ScriptEd Hackathon: Dare Explore Disrupt!
+# ScriptEd Hackathon: 2018!
 
 ### Your Project Members
 
