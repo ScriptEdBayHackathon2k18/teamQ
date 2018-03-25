@@ -55,8 +55,8 @@ function updateBlackhole(blackhole,text){
    }
   
   
-  else if(document.URL.contains("/page-one.html")){
-  alert(text);
+  else if(document.URL === "https://quackathon.glitch.me/page-one.html"){
+  alert("User says: " + text);
     }
      
      
@@ -74,10 +74,7 @@ function updateBlackhole(blackhole,text){
   element.appendChild(node);
   
   var blackhole = document.getElementsByClassName(blackhole)[0];
-  
-  //the below 2 lines state
-  var degrees = getRotationDegrees(blackhole);
-  $(element).css({'transform' : 'rotate(-'+ degrees +'deg)'});
+
   
   blackhole.appendChild(element);
   
@@ -85,6 +82,12 @@ function updateBlackhole(blackhole,text){
 	element.style.top = xy[0] + 'px';
 	element.style.left = xy[1] + 'px';
   
+    
+  //the below 2 lines state that the variable degrees will get the rotation of the blackhole. Then
+  var degrees = getRotationDegrees(blackhole);
+  //alert(degrees);
+  console.log(degrees);
+  $(element).css({'transform' : 'rotate(-'+ degrees +'deg)'});
 }
 
 $("problem").click(function(){
@@ -108,7 +111,7 @@ function getRandomPosition(element) {
 }
 
 function getRotationDegrees(obj) {
-    var matrix = obj.css("-webkit-transform") ||
+    var matrix = $(obj).css("-webkit-transform") ||
     obj.css("-moz-transform")    ||
     obj.css("-ms-transform")     ||
     obj.css("-o-transform")      ||
