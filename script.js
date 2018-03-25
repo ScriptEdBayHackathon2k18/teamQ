@@ -6,18 +6,13 @@ var selectedProblem ;
 
 
 $(".add-problem-button").click(function(){
-
   var problem = $(".add-problem-input").val();
-  
   addProblem(problem);
-  
 });
 
 $(".add-comment-button").click(function(){
-
   var comment = $(".add-comment-input").val();
   addComment(comment);
-  
 });
 
 $(".problem").click(function() {
@@ -27,7 +22,6 @@ $(".problem").click(function() {
 function addProblem(problem){
   problemsArray.push(problem);
   console.log(problemsArray);
-  //alert(problemsArray);
   updateBlackhole("blackholeProblem",problem);
 }
 
@@ -40,35 +34,19 @@ addProblem("problem");
 addProblem("Another problem");
 
 function updateBlackhole(blackhole,text){
-  
-  
   var element= document.createElement("div");
-  
   $(element).click(function(){
-    
-  var popupWindow;
-  
-
-  if ( document.URL === "https://quackathon.glitch.me/" ) {
-  // popupWindow = window.open("/page-one.html");
-  popupWindow.focus();
-   }
-  
-  
-  else if(document.URL === "https://quackathon.glitch.me/page-one.html"){
-  alert("User says: " + text);
+    var popupWindow;
+    if ( document.URL === "https://quackathon.glitch.me/" ) {
+    popupWindow = window.open("/page-one.html?problemtitle=" + text);
+    popupWindow.focus();
+    } else if(document.URL === "https://quackathon.glitch.me/page-one.html"){
+     alert("User says: " + text);
     }
-     
-     
-     
-
-  
-    
   });
   
-  
   element.classList.add("problem","reverse-rotating");
-  
+
   var node = document.createTextNode(text);
 
   element.appendChild(node);
@@ -87,7 +65,11 @@ function updateBlackhole(blackhole,text){
   var degrees = getRotationDegrees(blackhole);
   //alert(degrees);
   console.log(degrees);
-  $(element).css({'transform' : 'rotate(-'+ degrees +'deg)'});
+  //$(element).css({'transform' : 'rotate(-'+ degrees +'deg)'});
+  
+  //$(element).rotate(-1 * degrees)
+  
+  $(element).css("color",getRandomColor());
 
 }
 
@@ -132,3 +114,29 @@ $(".heading").html(title);
   
 }
 
+function getRandomColor() {
+  var letters = '0123456789ABCDEF';
+  var color = '#';
+  for (var i = 0; i < 6; i++) {
+    color += letters[Math.floor(Math.random() * 16)];
+  }
+  return color;
+}
+function randomFont () {
+   var fonts = [Montserrat,Raleway,] 
+}
+
+function getUrlParameter(sParam) {
+    var sPageURL = decodeURIComponent(window.location.search.substring(1)),
+        sURLVariables = sPageURL.split('&'),
+        sParameterName,
+        i;
+
+    for (i = 0; i < sURLVariables.length; i++) {
+        sParameterName = sURLVariables[i].split('=');
+
+        if (sParameterName[0] === sParam) {
+            return sParameterName[1] === undefined ? true : sParameterName[1];
+        }
+    }
+};
