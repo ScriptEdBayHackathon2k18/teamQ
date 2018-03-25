@@ -30,7 +30,6 @@ function addComment(comment){
   updateBlackhole("blackholeComment",comment);
 }
 
-
 function updateBlackhole(blackhole,text){
   var element= document.createElement("div");
   $(element).click(function(){
