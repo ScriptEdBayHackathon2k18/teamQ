@@ -47,12 +47,14 @@ function updateBlackhole(blackhole,text){
   $(element).click(function(){
     
   var popupWindow;
+   if(){  
   popupWindow = window.open("/page-one.html");
   popupWindow.focus();
+  }
     
   });
   
-  element.classList.add("problem","reverse-rotating","star-six");
+  element.classList.add("problem","reverse-rotating");
   
   var node = document.createTextNode(text);
 
@@ -78,8 +80,10 @@ $("problem").click(function(){
 addProblem("Gun Violence");
 
 function getRandomPosition(element) {
-	var x = document.body.offsetHeight-element.clientHeight;
-	var y = document.body.offsetWidth-element.clientWidth;
+	var x = $("blackhole" ).height();
+  element.clientHeight;
+	var y = $("blackhole").width();
+  element.clientWidth;
 	var randomX = Math.floor(Math.random()*x);
 	var randomY = Math.floor(Math.random()*y);
 	return [randomX,randomY];
