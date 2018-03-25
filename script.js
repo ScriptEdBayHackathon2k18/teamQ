@@ -40,8 +40,9 @@ function updateBlackhole(blackhole,text){
     if ( document.URL === "https://quackathon.glitch.me/" ) {
     popupWindow = window.open("/page-one.html?problemtitle=" + text);
     popupWindow.focus();
-    } else if(document.URL === "https://quackathon.glitch.me/page-one.html"){
-     alert("User says: " + text);
+    } else if(document.URL startWith ("https://quackathon.glitch.me/page-one.html"){
+     
+      alert("User says: " + text);
     }
   });
   
@@ -70,6 +71,7 @@ function updateBlackhole(blackhole,text){
   //$(element).rotate(-1 * degrees)
   
   $(element).css("color",getRandomColor());
+  $(element).css("font-family",randomFont());
 
 }
 
@@ -123,7 +125,8 @@ function getRandomColor() {
   return color;
 }
 function randomFont () {
-   var fonts = [Montserrat,Raleway,] 
+   var fonts = ["Montserrat","Raleway","Share Tech"]
+   return fonts[Math.floor(Math.random() * 3)];
 }
 
 function getUrlParameter(sParam) {
