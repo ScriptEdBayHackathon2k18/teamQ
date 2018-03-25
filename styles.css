@@ -1,5 +1,8 @@
 body {
-   background-image: url("https://cdn.glitch.com/9529195d-62ac-4daf-a8c1-7bf2bb0614f7%2F171130141043_1_900x600.jpg?1522004127318");
+  background-image: url("https://cdn.glitch.com/9529195d-62ac-4daf-a8c1-7bf2bb0614f7%2F5be2143a-2934-4a5f-c0ed-0f696e5630d0.png?1522016225204");
+  background-repeat: no-repeat;
+  background-size: cover;
+
 }
 
 h1 {
@@ -24,7 +27,7 @@ h1 {
 }
 
 .blackhole {
- background-image: url("https://cdn.glitch.com/9529195d-62ac-4daf-a8c1-7bf2bb0614f7%2F171130141043_1_900x600.jpg?1522004127318");
+ background-image: url("https://cdn.glitch.com/9529195d-62ac-4daf-a8c1-7bf2bb0614f7%2F5be2143a-2934-4a5f-c0ed-0f696e5630d0.png?1522016225204");
   height: 600px;
   width: 600px;
   background-position: center;

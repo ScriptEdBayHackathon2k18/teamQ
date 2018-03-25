@@ -30,8 +30,6 @@ function addComment(comment){
   updateBlackhole("blackholeComment",comment);
 }
 
-addProblem("problem");
-addProblem("Another problem");
 
 function updateBlackhole(blackhole,text){
   var element= document.createElement("div");
@@ -40,7 +38,7 @@ function updateBlackhole(blackhole,text){
     if ( document.URL === "https://quackathon.glitch.me/" ) {
     popupWindow = window.open("/page-one.html?problemtitle=" + text);
     popupWindow.focus();
-    } else if(document.URL startWith ("https://quackathon.glitch.me/page-one.html"){
+    } else if(document.URL.startsWith ("https://quackathon.glitch.me/page-one.html")){
      
       alert("User says: " + text);
     }
@@ -54,8 +52,9 @@ function updateBlackhole(blackhole,text){
   
   var blackhole = document.getElementsByClassName(blackhole)[0];
 
-  
-  blackhole.appendChild(element);
+  if (blackhole) {
+      blackhole.appendChild(element);
+  }
   
    var xy = getRandomPosition(element);
 	element.style.top = xy[0] + 'px';
@@ -70,7 +69,7 @@ function updateBlackhole(blackhole,text){
   
   //$(element).rotate(-1 * degrees)
   
-  $(element).css("color",getRandomColor());
+  $(element).css("color",randomGoodColor());
   $(element).css("font-family",randomFont());
 
 }
@@ -82,7 +81,6 @@ $("problem").click(function(){
 });
 
 
-addProblem("Gun Violence");
 
 function getRandomPosition(element) {
 	var x = $("blackhole" ).height();
@@ -116,17 +114,15 @@ $(".heading").html(title);
   
 }
 
-function getRandomColor() {
-  var letters = '0123456789ABCDEF';
-  var color = '#';
-  for (var i = 0; i < 6; i++) {
-    color += letters[Math.floor(Math.random() * 16)];
-  }
-  return color;
-}
+
 function randomFont () {
    var fonts = ["Montserrat","Raleway","Share Tech"]
    return fonts[Math.floor(Math.random() * 3)];
+}
+
+function randomGoodColor () {
+   var colors = ["#ff0000","#00ff48","#faff00","#00d4ff","#f200ff","#ae00ff"]
+   return colors[Math.floor(Math.random() * 6)];
 }
 
 function getUrlParameter(sParam) {
@@ -143,3 +139,13 @@ function getUrlParameter(sParam) {
         }
     }
 };
+
+addProblem("Gun Violence");
+addProblem("School Oraganization");
+addProblem("Bus Schedule");
+addProblem("Phone Distraction");
+addProblem("Robots");
+addProblem("Not Being Understood");
+addProblem("San Francisco Is Expensive");
+addProblem("Homelessness");
+addProblem("")
