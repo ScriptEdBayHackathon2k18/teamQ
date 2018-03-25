@@ -5,6 +5,7 @@ body {
 
 }
 
+
 h1 {
   color: #30ceff;
   text-align: center;
@@ -15,16 +16,20 @@ h1 {
   
 }
 
+
 .problem {
  color: #ffffff;    
  font-size: 20px; 
  cursor: pointer;
   font-family: 'Montserrat', sans-serif;
+  position:absolute;
 }
+
 
 #home-button {
  color: #ffffff; 
 }
+
 
 .blackhole {
  background-image: url("https://cdn.glitch.com/9529195d-62ac-4daf-a8c1-7bf2bb0614f7%2F5be2143a-2934-4a5f-c0ed-0f696e5630d0.png?1522016225204");
@@ -38,19 +43,24 @@ h1 {
   
 }
 
+
 @keyframes spin { 100% { transform:rotate(360deg); } }
 .rotating{
     animation:spin 50s linear infinite;
 }
+
 .reverse-rotating{
     animation:spin reverse 50s linear infinite;
     display: inline-block;
 }
 
+
+
 .center {
     margin: auto;
     /*width: 50%;*/
 }
+
 
 .bottom-right-box {
    position:absolute;

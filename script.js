@@ -83,9 +83,9 @@ $("problem").click(function(){
 
 
 function getRandomPosition(element) {
-	var x = $("blackhole" ).height();
+	var x = $(".blackhole" ).height();
   element.clientHeight;
-	var y = $("blackhole").width();
+	var y = $(".blackhole").width();
   element.clientWidth;
 	var randomX = Math.floor(Math.random()*x);
 	var randomY = Math.floor(Math.random()*y);
@@ -121,7 +121,7 @@ function randomFont () {
 }
 
 function randomGoodColor () {
-   var colors = ["#ff0000","#00ff48","#faff00","#00d4ff","#f200ff","#ae00ff"]
+   var colors = ["#ff0000","#00ff48","#faff00","#00d4ff","#f200ff","#bc85bc"]
    return colors[Math.floor(Math.random() * 6)];
 }
 
@@ -148,4 +148,4 @@ addProblem("Robots");
 addProblem("Not Being Understood");
 addProblem("San Francisco Is Expensive");
 addProblem("Homelessness");
-addProblem("")
+addProblem("Teachers are not Doing their jobs")
