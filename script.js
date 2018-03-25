@@ -49,15 +49,14 @@ function updateBlackhole(blackhole,text){
   var popupWindow;
   
 
-  if ( document.URL.contains("index.html") ) {
+  if ( document.URL === "https://quackathon.glitch.me/" ) {
   popupWindow = window.open("/page-one.html");
   popupWindow.focus();
    }
   
   
   else if(document.URL.contains("/page-one.html")){
-  alert(blackh);popupWpage-two.html");
-    popupWindow.focus();
+  alert(text);
     }
      
      
@@ -67,6 +66,7 @@ function updateBlackhole(blackhole,text){
     
   });
   
+  
   element.classList.add("problem","reverse-rotating");
   
   var node = document.createTextNode(text);
@@ -74,6 +74,10 @@ function updateBlackhole(blackhole,text){
   element.appendChild(node);
   
   var blackhole = document.getElementsByClassName(blackhole)[0];
+  
+  //the below 2 lines state
+  var degrees = getRotationDegrees(blackhole);
+  $(element).css({'transform' : 'rotate(-'+ degrees +'deg)'});
   
   blackhole.appendChild(element);
   
