@@ -18,11 +18,11 @@
     Jinglan and Kailin: At first, it is hard for us to create the foundation of the website. After this, we were being able to do some research and work by myself to make our websites looks better.  
     Andres: The first challenge I ran into was rotating the black hole. Giving it the rotating animation was difficult. I had to center it and find the perfect width and height. Also how much degrees it should rotate. I also had to find a way on how to keep the problems from rotating the opposite direction from the hole. 
 ### What accomplishments are you most proud of?
-  Andres: I am most proud of getting the black hole to rotate and have a cool animation. Also getting the random colors and fonts for the text.
+  Andres: I am most proud of getting the black hole to rotate and have a cool animation. Also getting the random colors and fonts for the text. 
   Jinglan: I am most pround of working together and solving problems together.
   Kailin: I am most proud of communicating sucessfully with other people in my team to turn the project into what we are thinking in mind.
 ### What did your team learn?
-  We learned how to communicate well. We also helped each other out when they were stuck and had questions. We learned about new javascripts
+  We learned how to communicate well. We also helped each other out when they were stuck and had questions. We learned about new javascripts : randomization, open new webpages ,generating html and javascript.
 
 
 
