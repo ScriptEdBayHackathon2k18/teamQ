@@ -17,7 +17,7 @@ function addProblem(problem){
   updateBlackhole(problem);
 }
 
-function updateBlackhole(problem){
+function updateBlackhole(blackhole){
 
   var element= document.createElement("div");
   
@@ -28,14 +28,13 @@ function updateBlackhole(problem){
   });
     
   
-  
-  element.classList.add("problem");
+  element.classList.add("problem","reverse-rotating");
   
   var node = document.createTextNode(problem);
 
   element.appendChild(node);
   
-  var blackhole = document.getElementsByClassName("blackhole")[0];
+  var blackhole = document.getElementsByClassName(blackhole)[0];
   
   blackhole.appendChild(element);
    
@@ -53,3 +52,10 @@ addProblem("Gun Violence");
 
 
 
+function getRandomPosition(problem) {
+	var x = document.body.offsetHeight-problem.clientHeight;
+	var y = document.body.offsetWidth-problem.clientWidth;
+	var randomX = Math.floor(Math.random()*x);
+	var randomY = Math.floor(Math.random()*y);
+	return [randomX,randomY];
+}
