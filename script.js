@@ -1,5 +1,6 @@
 console.log('hi');
 var problemsArray = [];
+var commentsArray = [];
 var selectedProblem ;
 
 
@@ -12,6 +13,13 @@ $(".add-problem-button").click(function(){
   
 });
 
+$(".add-comment-button").click(function(){
+
+  var comment = $(".add-comment-input").val();
+  addComment(comment);
+  
+});
+
 $(".problem").click(function() {
     window.open("/page-one.html");
 });
@@ -20,9 +28,14 @@ function addProblem(problem){
   problemsArray.push(problem);
   console.log(problemsArray);
   //alert(problemsArray);
-  
   updateBlackhole("blackholeProblem",problem);
 }
+
+function addComment(comment){
+  commentsArray.push(comment);
+  updateBlackhole("blackholeComment",comment);
+}
+
 addProblem("problem");
 addProblem("Another problem");
 
@@ -37,8 +50,7 @@ function updateBlackhole(blackhole,text){
     
   });
   
-  
-  element.classList.add("problem","reverse-rotating");
+  element.classList.add("problem","reverse-rotating","star-six");
   
   var node = document.createTextNode(text);
 
@@ -72,3 +84,12 @@ function getRandomPosition(element) {
   
 }
 
+function openWindow( url )
+{
+  window.open(url, '_blank');
+  window.focus();
+}
+
+<a href="/page-one.html" onclick="javascript:openWindow(this.href);return false;">Click Me</a>
+popupWindow = window.open("url");
+popupWindow = focus;
