@@ -21,6 +21,14 @@ function updateBlackhole(problem){
 
   var element= document.createElement("div");
   
+  $(element).click(function(){
+  
+  window.open("/page-one.html");
+    
+  });
+    
+  
+  
   element.classList.add("problem");
   
   var node = document.createTextNode(problem);

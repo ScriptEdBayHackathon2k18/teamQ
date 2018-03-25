@@ -31,10 +31,13 @@ h1 {
 }
 
 @keyframes spin { 100% { transform:rotate(360deg); } }
+@keyframes counterspin{ 100% { transform:rotate(-360deg); } }
 .rotating{
     animation:spin 30s linear infinite;
 }
-
+.reverse-rotating{
+    animation:counterspin 30s linear infinite;
+}
 
 .center {
     margin: auto;
@@ -43,6 +46,6 @@ h1 {
 
 .add-problem {
    position:absolute;
-     bottom:0;
-     right:0;
+     bottom:10px;
+     right:10px;
 }
