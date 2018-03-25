@@ -1,5 +1,6 @@
 console.log('hi');
 var problemsArray = [];
+var selectedProblem ;
 
 $(".add-problem-button").click(function(){
 
@@ -33,9 +34,11 @@ function updateBlackhole(problem){
   
 }
 
-$(problem).click(function(){
+$("problem").click(function(){
 
-  var problem = $(
-
+  
+  
 });
+
+
 addProblem("Gun Violence");
