@@ -50,7 +50,7 @@ function updateBlackhole(blackhole,text){
   
 
   if ( document.URL === "https://quackathon.glitch.me/" ) {
-  popupWindow = window.open("/page-one.html");
+  // popupWindow = window.open("/page-one.html");
   popupWindow.focus();
    }
   
@@ -88,6 +88,7 @@ function updateBlackhole(blackhole,text){
   //alert(degrees);
   console.log(degrees);
   $(element).css({'transform' : 'rotate(-'+ degrees +'deg)'});
+
 }
 
 $("problem").click(function(){
@@ -124,3 +125,10 @@ function getRotationDegrees(obj) {
     } else { var angle = 0; }
     return (angle < 0) ? angle + 360 : angle;
 }
+
+function changeHeading(title){
+
+$(".heading").html(title);
+  
+}
+
