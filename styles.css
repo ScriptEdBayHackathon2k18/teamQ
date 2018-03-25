@@ -36,8 +36,7 @@ h1 {
 }
 .reverse-rotating{
     animation:spin reverse 30s linear infinite;
-  background:red;
-  display: inline-block
+    display: inline-block
 }
 
 .center {

@@ -45,8 +45,10 @@ function updateBlackhole(blackhole,text){
   var element= document.createElement("div");
   
   $(element).click(function(){
-  
-  window.open("/page-one.html");
+    
+  var popupWindow;
+  popupWindow = window.open("/page-one.html");
+  popupWindow.focus();
     
   });
   
@@ -83,13 +85,3 @@ function getRandomPosition(element) {
 	return [randomX,randomY];
   
 }
-
-function openWindow( url )
-{
-  window.open(url, '_blank');
-  window.focus();
-}
-
-<a href="/page-one.html" onclick="javascript:openWindow(this.href);return false;">Click Me</a>
-popupWindow = window.open("url");
-popupWindow = focus;
