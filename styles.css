@@ -17,10 +17,29 @@ h1 {
 .blackhole {
  background-image: url("https://cdn.glitch.com/9529195d-62ac-4daf-a8c1-7bf2bb0614f7%2F171130141043_1_900x600.jpg?1522004127318");
   height: 500px;
-  /*width: 500px;*/
-    background-position: center;
+  width: 500px;
+  background-position: center;
   background-repeat: no-repeat;
+  border-radius: 50%;
+  -webkit-transition-duration: 0.8s;
+    -moz-transition-duration: 0.8s;
+    -o-transition-duration: 0.8s;
+    transition-duration: 0.8s;
+
+    -webkit-transition-property: -webkit-transform;
+    -moz-transition-property: -moz-transform;
+    -o-transition-property: -o-transform;
+     transition-property: transform;
+
+     overflow:hidden;
+  -webkit-transform:rotate(360deg);
+    -moz-transform:rotate(360deg); 
+    -o-transform:rotate(360deg);
   
   
-  
+}
+
+.center {
+    margin: auto;
+    /*width: 50%;*/
 }

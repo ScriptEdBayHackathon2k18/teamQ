@@ -20,14 +20,15 @@ function updateBlackhole(problem){
 
   var element= document.createElement("div");
   
-  element.addClass("problem");
+  element.classList.add("problem");
   
   var node = document.createTextNode(problem);
 
   element.appendChild(node);
   
-  var blackhole = document.getElementsByClassName("blackhole");
+  var blackhole = document.getElementsByClassName("blackhole")[0];
   
+  blackhole.appendChild(element);
   
   
   
