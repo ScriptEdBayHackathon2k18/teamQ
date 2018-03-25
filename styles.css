@@ -3,7 +3,15 @@ body {
 }
 
 h1 {
-  color: #003fff;
+  color: #30ceff;
+}
+
+.problem {
+ color: #ffffff;    
+}
+
+#home-button {
+ color: #ffffff; 
 }
 
 .blackhole {

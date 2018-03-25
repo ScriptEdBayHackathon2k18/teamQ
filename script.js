@@ -12,10 +12,14 @@ $(".add-problem-button").click(function(){
 function addProblem(problem){
   problemsArray.push(problem);
   console.log(problemsArray);
+  //alert(problemsArray);
+  updateBlackhole(problem);
 }
 
-function updateBlackhole(){
+function updateBlackhole(pro){
 
+  var element= document.createElement("div");
+  element.addClass("problem");
   
   
 }
