@@ -16,10 +16,19 @@ function addProblem(problem){
   updateBlackhole(problem);
 }
 
-function updateBlackhole(pro){
+function updateBlackhole(problem){
 
   var element= document.createElement("div");
+  
   element.addClass("problem");
+  
+  var node = document.createTextNode(problem);
+
+  element.appendChild(node);
+  
+  var blackhole = document.getElementsByClassName("blackhole");
+  
+  
   
   
 }

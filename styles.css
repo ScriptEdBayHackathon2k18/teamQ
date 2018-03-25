@@ -15,8 +15,11 @@ h1 {
 }
 
 .blackhole {
- 
-  
+ background-image: url("https://cdn.glitch.com/9529195d-62ac-4daf-a8c1-7bf2bb0614f7%2F171130141043_1_900x600.jpg?1522004127318");
+  height: 500px;
+  /*width: 500px;*/
+    background-position: center;
+  background-repeat: no-repeat;
   
   
   
