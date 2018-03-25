@@ -31,12 +31,13 @@ h1 {
 }
 
 @keyframes spin { 100% { transform:rotate(360deg); } }
-@keyframes counterspin{ 100% { transform:rotate(-360deg); } }
 .rotating{
     animation:spin 30s linear infinite;
 }
 .reverse-rotating{
-    animation:counterspin 30s linear infinite;
+    animation:spin reverse 30s linear infinite;
+  background:red;
+  display: block
 }
 
 .center {
