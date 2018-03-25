@@ -7,10 +7,16 @@ $(".add-problem-button").click(function(){
   
   addProblem(problem);
   
-
 });
+
 function addProblem(problem){
   problemsArray.push(problem);
   console.log(problemsArray);
 }
-addProblem
+
+function updateBlackhole(){
+
+  
+  
+}
+addProblem("Gun Violence");
