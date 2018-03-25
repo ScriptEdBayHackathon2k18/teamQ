@@ -4,6 +4,7 @@ body {
 
 h1 {
   color: #30ceff;
+  
 }
 
 .problem {
@@ -21,23 +22,16 @@ h1 {
   background-position: center;
   background-repeat: no-repeat;
   border-radius: 50%;
-  -webkit-transition-duration: 0.8s;
-    -moz-transition-duration: 0.8s;
-    -o-transition-duration: 0.8s;
-    transition-duration: 0.8s;
-
-    -webkit-transition-property: -webkit-transform;
-    -moz-transition-property: -moz-transform;
-    -o-transition-property: -o-transform;
-     transition-property: transform;
-
-     overflow:hidden;
-  -webkit-transform:rotate(360deg);
-    -moz-transform:rotate(360deg); 
-    -o-transform:rotate(360deg);
+  
   
   
 }
+
+.rotating{
+    animation:spin 30s linear infinite;
+}
+@keyframes spin { 100% { transform:rotate(360deg); } }
+
 
 .center {
     margin: auto;

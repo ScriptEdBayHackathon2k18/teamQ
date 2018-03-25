@@ -29,8 +29,13 @@ function updateBlackhole(problem){
   var blackhole = document.getElementsByClassName("blackhole")[0];
   
   blackhole.appendChild(element);
-  
-  
+   
   
 }
+
+$(problem).click(function(){
+
+  var problem = $(
+
+});
 addProblem("Gun Violence");
