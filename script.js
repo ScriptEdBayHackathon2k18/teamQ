@@ -47,10 +47,23 @@ function updateBlackhole(blackhole,text){
   $(element).click(function(){
     
   var popupWindow;
-   if(){  
+  
+
+  if ( document.URL.contains("index.html") ) {
   popupWindow = window.open("/page-one.html");
   popupWindow.focus();
-  }
+   }
+  
+  
+  else if(document.URL.contains("/page-one.html")){
+  alert(blackh);popupWpage-two.html");
+    popupWindow.focus();
+    }
+     
+     
+     
+
+  
     
   });
   
@@ -88,4 +101,19 @@ function getRandomPosition(element) {
 	var randomY = Math.floor(Math.random()*y);
 	return [randomX,randomY];
   
+}
+
+function getRotationDegrees(obj) {
+    var matrix = obj.css("-webkit-transform") ||
+    obj.css("-moz-transform")    ||
+    obj.css("-ms-transform")     ||
+    obj.css("-o-transform")      ||
+    obj.css("transform");
+    if(matrix !== 'none') {
+        var values = matrix.split('(')[1].split(')')[0].split(',');
+        var a = values[0];
+        var b = values[1];
+        var angle = Math.round(Math.atan2(b, a) * (180/Math.PI));
+    } else { var angle = 0; }
+    return (angle < 0) ? angle + 360 : angle;
 }
