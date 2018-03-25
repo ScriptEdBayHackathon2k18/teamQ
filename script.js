@@ -35,8 +35,8 @@ function updateBlackhole(blackhole,text){
   $(element).click(function(){
     var popupWindow;
     if ( document.URL === "https://quackathon.glitch.me/" ) {
-    popupWindow = window.open("/page-one.html?problemtitle=" + text);
-    popupWindow.focus();
+      popupWindow = window.open("/page-one.html?problemtitle=" + text);
+      popupWindow.focus();
     } else if(document.URL.startsWith ("https://quackathon.glitch.me/page-one.html")){
      
       alert("User says: " + text);
